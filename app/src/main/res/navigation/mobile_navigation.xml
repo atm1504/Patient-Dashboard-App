@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.atm1504.gosocio.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_share"
+            app:destination="@id/nav_share" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tools"
+            app:destination="@id/nav_tools" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_reports_submitted"
+            app:destination="@id/nav_reports_submitted" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.atm1504.gosocio.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_signup"
+        android:name="com.atm1504.gosocio.ui.signup.SignupFragment"
+        android:label="@string/menu_signup"
+        tools:layout="@layout/fragment_signup" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.atm1504.gosocio.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.atm1504.gosocio.ui.submitReport.SubmitReportFragment"
+        android:label="@string/menu_submit_report"
+        tools:layout="@layout/fragment_submit_report" />
+
+    <fragment
+        android:id="@+id/nav_reports_submitted"
+        android:name="com.atm1504.gosocio.ui.SubmittedReports.SubmittedReportsFragment"
+        android:label="@string/menu_reports_submitted"
+        tools:layout="@layout/fragment_submitted_reports" />
+
+
+    <fragment
+        android:id="@+id/nav_report_details"
+        android:name="com.atm1504.gosocio.ui.reportDetails.ReportDetailsFragment"
+        android:label="Report"
+        tools:layout="@layout/fragment_report_details" />
+
+</navigation>

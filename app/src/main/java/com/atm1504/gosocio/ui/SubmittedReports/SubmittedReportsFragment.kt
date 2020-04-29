@@ -92,7 +92,7 @@ class SubmittedReportsFragment : Fragment() {
             ) {
                 progressDialog?.dismiss()
                 Toast.makeText(context, "fetched", Toast.LENGTH_LONG).show()
-                Log.d("KHANKI", response.body()?.toString())
+                Log.d("KHANKI", response.body().toString())
                 if (response.body()?.status == 200) {
                     val reports = response.body()?.reports
                     if (reports != null) {

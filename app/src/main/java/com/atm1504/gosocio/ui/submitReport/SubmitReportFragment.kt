@@ -122,8 +122,13 @@ class SubmitReportFragment : Fragment(), AdapterView.OnItemSelectedListener {
             override fun onResponse(call: Call<RoadsResponse>, response: Response<RoadsResponse>) {
                 Log.d("KHANKI", "Fetched roads")
                 progressDialog?.dismiss()
-                roads = response.body()?.roads as List<String>
-                loadSpinner()
+                try {
+                    roads = response.body()?.roads as List<String>
+                    loadSpinner()
+                }
+                catch (e :TypeCastException){
+                    Log.d("KHANKI", "casting error")
+                }
 
             }
         })

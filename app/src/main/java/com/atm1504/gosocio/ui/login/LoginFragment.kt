@@ -17,7 +17,7 @@ import com.atm1504.gosocio.api.RetrofitApi
 import com.atm1504.gosocio.api.SignupResponse
 import com.atm1504.gosocio.utils.utils
 import kotlinx.android.synthetic.main.fragment_login.*
-import kotlinx.android.synthetic.main.fragment_signup.*
+
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call

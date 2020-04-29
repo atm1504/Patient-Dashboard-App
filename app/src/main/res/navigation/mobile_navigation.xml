@@ -31,7 +31,7 @@
         android:id="@+id/nav_signup"
         android:name="com.atm1504.gosocio.ui.signup.SignupFragment"
         android:label="@string/menu_signup"
-        tools:layout="@layout/fragment_signup" />
+        tools:layout="@layout/fragment_patient_signup" />
 
     <fragment
         android:id="@+id/nav_tools"

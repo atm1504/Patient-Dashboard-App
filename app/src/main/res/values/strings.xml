@@ -30,4 +30,18 @@
     <string name="camera">Camera</string>
     <string name="photo_road">Add photo of roade</string>
 
+    //specialist array
+    <string-array name="doctor_specialist">
+        <item>Podiatrist</item>
+        <item>Pediatrician</item>
+        <item>Neurologist</item>
+        <item>Rheumatologist</item>
+        <item>Psychiatrist</item>
+        <item>Surgeon</item>
+        <item>Physician</item>
+        <item>Urologist</item>
+        <item>Cardiologist</item>
+        <item>Orthopedist</item>
+    </string-array>
+
 </resources>

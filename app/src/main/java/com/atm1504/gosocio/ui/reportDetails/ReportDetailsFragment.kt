@@ -22,6 +22,7 @@ import retrofit2.Response
 
 class ReportDetailsFragment : Fragment() {
     private var progressDialog: ProgressDialog? = null
+    private val CONST="123"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +53,7 @@ class ReportDetailsFragment : Fragment() {
         val retofitApi = RetrofitApi.create()
         val email = RequestBody.create(MediaType.parse("text/plain"), "gdger@eer")
         val access_token = RequestBody.create(MediaType.parse("text/plain"), "ewutuwe53b2s6")
-        val id = RequestBody.create(MediaType.parse("text/plain"), arguments?.getString("id"))
+        val id = RequestBody.create(MediaType.parse("text/plain"), CONST)
 
         val call = retofitApi.getReport(email, access_token, id)
         call.enqueue(object : Callback<ReportResponse> {

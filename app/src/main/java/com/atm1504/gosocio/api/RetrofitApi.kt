@@ -12,8 +12,12 @@ import retrofit2.http.Part
 interface RetrofitApi {
 
     @Multipart
-    @POST("login.php")
-    fun login(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
+    @POST("loginDoctor.php")
+    fun loginDoctor(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
+
+    @Multipart
+    @POST("loginPatient.php")
+    fun loginPatient(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
 
     @Multipart
     @POST("signup.php")

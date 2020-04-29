@@ -17,6 +17,28 @@
         android:textColor="#000"
         android:textAllCaps="true"
         android:textSize="40sp" />
+    <RadioGroup
+        android:id="@+id/usertype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor     "
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient"
+            android:textSize="20sp" />
+
+    </RadioGroup>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

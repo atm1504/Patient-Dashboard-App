@@ -17,6 +17,7 @@ import com.atm1504.gosocio.R
 import com.atm1504.gosocio.api.LoginResponse
 import com.atm1504.gosocio.api.RetrofitApi
 import com.atm1504.gosocio.api.SignupResponse
+import com.atm1504.gosocio.ui.Doctor.DoctorDashboardFragment
 import com.atm1504.gosocio.utils.utils
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -30,9 +31,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
     private val PREFS_NAME = "atm"
-    private lateinit var usertype: RadioGroup
-    private lateinit var doctor: RadioButton
-    private lateinit var patient: RadioButton
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,6 +59,7 @@ class LoginFragment : Fragment() {
                     Toast.makeText(context, "Enter allt he fields correctly", Toast.LENGTH_LONG).show()
                 } else {
                     loginDoctor(email, password)
+
                 }
             }
             if (id ==R.id.login_patient){

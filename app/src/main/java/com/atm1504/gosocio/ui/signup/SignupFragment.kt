@@ -265,7 +265,7 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
 
 
-        val call = retofitApi.signup(email, password, name, phone, confirm_password, aadhar)
+        val call = retofitApi.signupDoctor(email, password, name, phone, confirm_password, aadhar, gender, address, pin, specialization)
         call.enqueue(object : Callback<SignupResponse> {
             override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
                 //To change body of created functions use File | Settings | File Templates.
@@ -305,7 +305,7 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
         val aadhar = RequestBody.create(MediaType.parse("text/plain"), aadharNum)
 
 
-        val call = retofitApi.signup(email, password, name, phone, confirm_password, aadhar)
+        val call = retofitApi.signupPatient(email, password, name, phone, confirm_password, aadhar, gender, address, pin)
         call.enqueue(object : Callback<SignupResponse> {
             override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
                 //To change body of created functions use File | Settings | File Templates.

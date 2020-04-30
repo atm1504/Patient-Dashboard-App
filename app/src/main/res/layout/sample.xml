@@ -1,112 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp"
-    android:background="@color/colorPrimary"
-    tools:context="com.themebd.mydoctorfinal.Doctor.Prescription">
+    android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="20sp"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:onClick="sendPrescribe"
-        android:text="Send"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
-
-    <EditText
-        android:id="@+id/sub"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Subject"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Insert subject for once"
-        />
+        android:background="@drawable/bordershape"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:orientation="vertical">
 
-    <com.themebd.mydoctorfinal.Doctor.CustomAutoCompleteView
-        android:id="@+id/myautocomplete"
-        android:hint="Medicine name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:completionThreshold="1" >
-    </com.themebd.mydoctorfinal.Doctor.CustomAutoCompleteView>
-
-    <RadioGroup
-        android:id="@+id/comment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/a"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/doctorname"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:checked="true"
-            android:text="1 + 1 + 1"
-            android:textColor="#154"
-            android:textSize="20sp"
+            android:layout_margin="3dp"
+            android:fontFamily="serif"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/QRCodeBlackColor"
             android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/b"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/presdate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:text="1 + 0 + 1"
-            android:textColor="#154"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_margin="3dp"
+            android:fontFamily="serif"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/QRCodeBlackColor" />
 
-        <RadioButton
-            android:id="@+id/c"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/symptoms_p"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:text="0 + 0 + 1"
-            android:textColor="#154"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_margin="3dp"
+            android:background="@color/QRCodeWhiteColor"
+            android:fontFamily="serif"
+            android:text="TextView"
+            android:textColor="@color/QRCodeBlackColor" />
 
 
-
-    </RadioGroup>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="20sp"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:onClick="addMedicine"
-        android:text="Add"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/medicine_list"
-        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/fev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:fontFamily="serif"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/QRCodeBlackColor" />
 
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/bloodPre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/QRCodeBlackColor"
+            android:fontFamily="serif"
+            android:text="TextView" />
 
+        <TextView
+            android:id="@+id/otherinf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/QRCodeBlackColor"
+            android:fontFamily="serif"
+            android:text="TextView" />
 
-
-</LinearLayout>
+        <TextView
+            android:id="@+id/prescv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/QRCodeBlackColor"
+            android:fontFamily="serif"
+            android:text="TextView" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

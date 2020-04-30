@@ -21,10 +21,20 @@ interface RetrofitApi {
 
     @Multipart
     @POST("signup.php")
-    fun signup(
+    fun signupDoctor(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
-        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("aadfhar") aadhar: RequestBody
+        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("aadfhar") aadhar: RequestBody,
+        @Part("gender") gender: RequestBody, @Part("address") address: RequestBody, @Part("pin") pin: RequestBody, @Part("specialization") specialization:RequestBody
+    ): Call<SignupResponse>
+
+    @Multipart
+    @POST("signupPatient.php")
+    fun signupPatient(
+        @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
+            "phone"
+        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("aadfhar") aadhar: RequestBody,
+        @Part("gender") gender: RequestBody, @Part("address") address: RequestBody, @Part("pin") pin: RequestBody
     ): Call<SignupResponse>
 
     @Multipart

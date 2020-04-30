@@ -59,6 +59,9 @@ class LoginFragment : Fragment() {
                     Toast.makeText(context, "Enter allt he fields correctly", Toast.LENGTH_LONG).show()
                 } else {
                     loginDoctor(email, password)
+//                    val doctorDashboardFragment:DoctorDashboardFragment = DoctorDashboardFragment();
+//                    activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.nav_host_fragment,doctorDashboardFragment,"newfragment")
+//                        ?.addToBackStack(null)?.commit()
 
                 }
             }
@@ -69,6 +72,7 @@ class LoginFragment : Fragment() {
                     loginPatient(email, password)
                 }
             }
+
 
 
 

@@ -4,6 +4,7 @@
     android:layout_gravity="center"
     android:background="#EAEAEA"
     android:gravity="center"
+    android:id="@+id/login_fragment"
     android:layout_height="match_parent"
     android:orientation="vertical">
 

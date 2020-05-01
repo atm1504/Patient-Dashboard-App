@@ -6,14 +6,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.atm1504.gosocio.R
 import kotlinx.android.synthetic.main.fragment_profile.*
 
-class ProfileFragment : Fragment() {
+class PatientProfileFragment : Fragment() {
 
-    private lateinit var profileViewModel: ProfileViewModel
+    private lateinit var patientProfileViewModel: PatientProfileViewModel
     private val PREFS_NAME = "atm"
 
     override fun onCreateView(
@@ -21,9 +22,10 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        profileViewModel =
-            ViewModelProviders.of(this).get(ProfileViewModel::class.java)
+        patientProfileViewModel =
+            ViewModelProviders.of(this).get(PatientProfileViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_profile, container, false)
+        (activity as AppCompatActivity).supportActionBar?.title = "Patient Profile"
         return root
     }
 

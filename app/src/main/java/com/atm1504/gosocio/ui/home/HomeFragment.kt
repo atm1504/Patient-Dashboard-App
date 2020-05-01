@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
         editor.putString("name", "Atreyee Mukherjee")
         editor.putString("email", "me@atm1504.in")
         editor.putString("phone", "8967570983")
+        editor.putString("isDoctor","No")
         editor.putFloat("coins", 50.0F)
         editor.putInt("stick1", 2)
         editor.putInt("stick2", 1)
@@ -53,18 +54,25 @@ class HomeFragment : Fragment() {
         editor.putBoolean("loggedIn", true)
         editor.commit()
 
-        setupIntents()
+        val sharedPref1: SharedPreferences = requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        var check:String? =sharedPref1.getString("isDoctor","No")
+        setupIntents(check)
 
     }
 
-    fun setupIntents() {
+    fun setupIntents(ch:String?) {
         move_submit_report.setOnClickListener {
             utils.showToast(requireContext(),"Clciked1")
             findNavController().navigate(R.id.action_nav_home_to_nav_share, null)
         }
 
         move_to_profile.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_home_to_nav_tools, null)
+            if(ch.equals("No")) {
+                findNavController().navigate(R.id.action_nav_home_to_nav_patient_profile, null)
+            }
+            if(ch.equals("Yes")){
+                //code for openning doctor profile
+            }
         }
 
         move_to_reports.setOnClickListener {

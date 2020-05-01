@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_reports_submitted"
             app:destination="@id/nav_reports_submitted" />
+        <action
+            android:id="@+id/action_nav_home_to_doctorProfileFragmet2"
+            app:destination="@id/doctorProfileFragmet2" />
     </fragment>
 
     <fragment
@@ -37,7 +40,7 @@
         android:id="@+id/nav_patient_profile"
         android:name="com.atm1504.gosocio.ui.profile.PatientProfileFragment"
         android:label="@string/menu_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_patient_profile" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -63,5 +66,9 @@
         android:name="com.atm1504.gosocio.ui.QRScanner.qrScannerFragment"
         android:label="Qr Code"
         tools:layout="@layout/fragment_qr_scanner"/>
+    <fragment
+        android:id="@+id/doctorProfileFragmet2"
+        android:name="com.atm1504.gosocio.ui.profile.DoctorProfileFragmet"
+        android:label="DoctorProfileFragmet" />
 
 </navigation>

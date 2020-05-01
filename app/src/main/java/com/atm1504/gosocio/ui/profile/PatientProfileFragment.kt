@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.atm1504.gosocio.R
-import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.fragment_patient_profile.*
 
 class PatientProfileFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class PatientProfileFragment : Fragment() {
     ): View? {
         patientProfileViewModel =
             ViewModelProviders.of(this).get(PatientProfileViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_profile, container, false)
+        val root = inflater.inflate(R.layout.fragment_patient_profile, container, false)
         (activity as AppCompatActivity).supportActionBar?.title = "Patient Profile"
         return root
     }

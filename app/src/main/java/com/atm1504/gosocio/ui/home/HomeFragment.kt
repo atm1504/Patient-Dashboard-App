@@ -72,6 +72,7 @@ class HomeFragment : Fragment() {
             }
             if(ch.equals("Yes")){
                 //code for openning doctor profile
+                findNavController().navigate(R.id.action_nav_home_to_doctorProfileFragmet2, null)
             }
         }
 

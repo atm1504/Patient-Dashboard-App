@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/nav_report_details"
-        android:name="com.atm1504.gosocio.ui.reportDetails.ReportDetailsFragment"
+        android:name="com.atm1504.gosocio.ui.QRScanner.qrScannerFragment"
         android:label="Report"
         tools:layout="@layout/fragment_report_details" />
 

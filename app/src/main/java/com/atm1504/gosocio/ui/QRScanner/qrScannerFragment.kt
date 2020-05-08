@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 
 import com.atm1504.gosocio.R
+import com.atm1504.gosocio.ui.Prescription.UploadPrescriptionActivity
 import com.google.android.gms.vision.CameraSource
 import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
@@ -111,6 +112,8 @@ class qrScannerFragment : Fragment() {
                 intentDta = barcode.valueAt(0).displayValue
                 txtBarcodeValue.text =intentDta
                 copyToClipBoard(intentDta)
+                val intent = Intent(context, UploadPrescriptionActivity::class.java);
+                startActivity(intent);
             }
 
         } )

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.atm1504.gosocio.R
 import com.atm1504.gosocio.api.LoginResponse
+import com.atm1504.gosocio.api.PrescriptionResponse
 import com.atm1504.gosocio.api.RetrofitApi
 import kotlinx.android.synthetic.main.activity_upload_prescription.*
 import okhttp3.MediaType
@@ -74,16 +75,18 @@ class UploadPrescriptionActivity : AppCompatActivity() {
 
 
         val call = retofitApi.uploadPrescriptionbyId(symptoms, medicine, dose, date, userId)
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
+        call.enqueue(object :Callback<PrescriptionResponse>{
+            override fun onFailure(call: Call<PrescriptionResponse>, t: Throwable) {
+                Toast.makeText(this@UploadPrescriptionActivity,"Something unexpected happened",
+                    Toast.LENGTH_LONG).show()
             }
 
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-
+            override fun onResponse(
+                call: Call<PrescriptionResponse>,
+                response: Response<PrescriptionResponse>
+            ) {
+                TODO("Not yet implemented")
             }
-
-
         })
     }
 

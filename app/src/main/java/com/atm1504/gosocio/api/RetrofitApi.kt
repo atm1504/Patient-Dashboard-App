@@ -14,7 +14,7 @@ interface RetrofitApi {
 
     @Multipart
     @POST("/patients/{id}/record")
-    fun uploadPrescriptionbyId(@Part("symptoms") symptoms: RequestBody, @Part("medicine") medicine: RequestBody, @Part("dose") dose: RequestBody, @Part("date") date: RequestBody, @Path("id") userId :String): Call<LoginResponse>
+    fun uploadPrescriptionbyId(@Part("symptoms") symptoms: RequestBody, @Part("medicine") medicine: RequestBody, @Part("dose") dose: RequestBody, @Part("date") date: RequestBody, @Path("id") userId :String): Call<PrescriptionResponse>
 
     @Multipart
     @POST("loginPatient.php")

@@ -9,4 +9,22 @@ data class PrescriptionResponse(
     private val symtomps:String="",
     private val medicine:String="",
     private val dose:String=""
-)
+){
+    fun name():String{
+        return name
+    }
+
+    fun age():Number{
+        return age
+    }
+    fun symptomps() :String{
+        return symtomps
+    }
+    fun medicine() :String{
+        return medicine
+    }
+    fun dose():String{
+        return dose
+    }
+
+}

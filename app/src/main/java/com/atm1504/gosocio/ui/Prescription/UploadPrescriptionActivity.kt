@@ -43,7 +43,7 @@ class UploadPrescriptionActivity : AppCompatActivity() {
                        date =  String.format("%02d-%02d-%02d", year, month + 1, dayOfMonth)
 
                     }, mYear, mMonth, mdayofMonth
-                )
+                )      
             datePickerDialog.setTitle("Choose Date")
             datePickerDialog.show()
         })

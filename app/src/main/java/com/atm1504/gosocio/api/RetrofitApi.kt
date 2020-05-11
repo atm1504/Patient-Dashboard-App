@@ -9,19 +9,19 @@ import retrofit2.http.*
 interface RetrofitApi {
 
     @Multipart
-    @POST("loginDoctor.php")
+    @POST("/doctors/signup")
     fun loginDoctor(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
 
     @Multipart
     @POST("/patients/{id}/record")
-    fun uploadPrescriptionbyId(@Part("symptoms") symptoms: RequestBody, @Part("medicine") medicine: RequestBody, @Part("dose") dose: RequestBody, @Part("date") date: RequestBody, @Path("id") userId :String): Call<LoginResponse>
+    fun uploadPrescriptionbyId(@Part("symptoms") symptoms: RequestBody, @Part("medicine") medicine: RequestBody, @Part("dose") dose: RequestBody, @Part("date") date: RequestBody, @Path("id") userId :String): Call<PrescriptionResponse>
 
     @Multipart
-    @POST("loginPatient.php")
+    @POST("/patients/signin")
     fun loginPatient(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
 
     @Multipart
-    @POST("signup.php")
+    @POST("/doctors/signup")
     fun signupDoctor(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
@@ -30,7 +30,7 @@ interface RetrofitApi {
     ): Call<SignupResponse>
 
     @Multipart
-    @POST("signupPatient.php")
+    @POST("/patients/signup")
     fun signupPatient(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"

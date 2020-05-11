@@ -9,12 +9,9 @@ data class LoginResponse(
     private val email: String = "",
     private val name: String = "",
     private val phone: String = "",
-    val coins: Number = 0,
-    val stick1: Number = 0,
-    val stick2: Number = 0,
-    val stick3: Number = 0,
-    val stick4: Number = 0,
-    val stick5: Number = 0
+    private val days: String = "",
+    private val time: String = "",
+    private val venue: String = ""
 
 ) {
     fun status(): Int {
@@ -37,7 +34,15 @@ data class LoginResponse(
         return phone
     }
 
-    fun coins(): Number {
-        return coins
+    fun days(): String{
+        return days
+    }
+
+    fun time(): String{
+        return time
+    }
+
+    fun venue(): String{
+        return  venue
     }
 }

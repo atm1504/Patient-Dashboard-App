@@ -63,54 +63,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:hint="Phone"
-                android:inputType="number"
-/>
-            <RadioGroup
-                android:id="@+id/gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/male"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Male       "
-                    android:textSize="20sp" />
-
-                <RadioButton
-                    android:id="@+id/female"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Female"
-                    android:textSize="20sp" />
-
-            </RadioGroup>
+                android:inputType="number" />
 
             <EditText
-                android:id="@+id/address"
+                android:id="@+id/time_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="20dp"
-                android:hint="Address"
+                android:hint="Time slot suitable for doctor"
                 android:drawablePadding="12dp"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/pin"
+                android:id="@+id/days_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="PIN Code"
-
-
+                android:hint="Days available"
                 android:inputType="number"
-
                 />
-
-
+            <EditText
+                android:id="@+id/venue_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Venue"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:visibility="visible"
+                />
 
             <EditText
                 android:id="@+id/password"
@@ -130,15 +112,6 @@
                 android:hint="Confirm Password"
                 android:drawablePadding="12sp"
                 android:inputType="textPassword" />
-            <EditText
-                android:id="@+id/aadhar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Aadhar No."
-                android:inputType="number"
-                android:layout_marginBottom="20dp"
-                android:visibility="visible"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"

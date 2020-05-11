@@ -34,20 +34,17 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private lateinit var specialization_doctor: String
     private lateinit var name: EditText
     private lateinit var email: EditText
-    private lateinit var address: EditText
     private lateinit var password: EditText
     private lateinit var confirmPassword: EditText
     private lateinit var phone: EditText
-    private lateinit var pincode: EditText
-    private lateinit var aadhar: EditText
     private lateinit var btnNext: Button
     private lateinit var usertype: RadioGroup
-    private lateinit var gender: RadioGroup
     private lateinit var doctor: RadioButton
     private lateinit var patient: RadioButton
-    private lateinit var male: RadioButton
-    private lateinit var female: RadioButton
     private lateinit var special_linear: LinearLayout
+    private lateinit var time: EditText
+    private lateinit var days: EditText
+    private lateinit var venue: EditText
 
 
     override fun onCreateView(
@@ -66,24 +63,20 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         name = rootview.findViewById(R.id.name)
         email = rootview.findViewById(R.id.email)
-        address = rootview.findViewById(R.id.address)
         phone = rootview.findViewById(R.id.phone)
-        pincode = rootview.findViewById(R.id.pin)
         password = rootview.findViewById(R.id.password)
         confirmPassword = rootview.findViewById(R.id.confirmPassword)
         btnNext = rootview.findViewById(R.id.next)
-        aadhar = rootview.findViewById(R.id.aadhar)
 
         special_linear = rootview.findViewById(R.id.specialist_linear)
 
         usertype = rootview.findViewById(R.id.usertype)
-        gender = rootview.findViewById(R.id.gender)
         doctor = rootview.findViewById(R.id.doctor)
         patient = rootview.findViewById(R.id.patient)
-        male = rootview.findViewById(R.id.male)
-        female = rootview.findViewById(R.id.female)
         doctor.setChecked(true)
-        male.setChecked(true)
+        days=rootview.findViewById(R.id.days_signup)
+        time=rootview.findViewById(R.id.time_signup)
+        venue=rootview.findViewById(R.id.venue_signup)
 
         special_linear.visibility = VISIBLE
 
@@ -125,17 +118,12 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 err = 0
                 val name = name.text?.trim().toString()
                 val email = email.text?.trim().toString()
-                val address = address.text?.trim().toString()
                 val phone = phone.text?.trim().toString()
-                val pin = pin.text?.trim().toString()
                 val password = password.text?.trim().toString()
-                val aadhar_num = aadhar.text?.trim().toString()
+                val venue:String = venue.text?.trim().toString()
+                val days:String = days.text?.trim().toString()
+                val time:String = time.text?.trim().toString()
                 val confirm_password = confirmPassword.text?.trim().toString()
-                val checkgender: String
-                if (this.gender.checkedRadioButtonId == R.id.male)
-                    checkgender = "Male"
-                else
-                    checkgender = "Female"
 
                 if (name.isNullOrBlank() || email.isNullOrBlank() || password.isNullOrBlank() || phone?.length != 10) {
                     Toast.makeText(context, "Enter proper datas int he field", Toast.LENGTH_SHORT)
@@ -148,23 +136,18 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
                     err += 1
                 }
 
-                if (aadhar_num.length != 12) {
-                    Toast.makeText(context, "Enter valid addhar number", Toast.LENGTH_SHORT).show()
-                    err += 1
-                }
 
                 if (err == 0) {
                     signUpDoctor(
                         name,
                         email,
                         phone,
-                        checkgender,
-                        address,
-                        pin,
                         password,
                         confirm_password,
-                        aadhar_num,
-                        specialization_doctor
+                        specialization_doctor,
+                        days,
+                        venue,
+                        time
                     )
                 }
 
@@ -173,17 +156,13 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 err = 0
                 val name = name.text?.trim().toString()
                 val email = email.text?.trim().toString()
-                val address = address.text?.trim().toString()
                 val phone = phone.text?.trim().toString()
-                val pin = pin.text?.trim().toString()
                 val password = password.text?.trim().toString()
-                val aadhar_num = aadhar.text?.trim().toString()
+                val venue:String = venue.text?.trim().toString()
+                val days:String = days.text?.trim().toString()
+                val time:String = time.text?.trim().toString()
                 val confirm_password = confirmPassword.text?.trim().toString()
                 val checkgender: String
-                if (this.gender.checkedRadioButtonId == R.id.male)
-                    checkgender = "Male"
-                else
-                    checkgender = "Female"
 
                 if (name.isNullOrBlank() || email.isNullOrBlank() || password.isNullOrBlank() || phone?.length != 10) {
                     Toast.makeText(context, "Enter proper datas int he field", Toast.LENGTH_SHORT)
@@ -203,12 +182,11 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
                         name,
                         email,
                         phone,
-                        checkgender,
-                        address,
-                        pin,
                         password,
                         confirm_password,
-                        aadhar_num
+                        days,
+                        time,
+                        venue
                     )
                 }
             }
@@ -240,32 +218,30 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
         name: String,
         email: String,
         phone: String,
-        gender: String,
-        address: String,
-        pin: String,
         password: String,
         confirmPassword: String,
-        aadharNum: String,
-        specialization: String
+        specialization: String,
+        days: String,
+        venue:String,
+        time:String
     ) {
-        Toast.makeText(context,"$name $email $password $gender $address $pin $confirmPassword $phone $aadharNum $specialization",Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"$name $email $password $days $time $venue $confirmPassword $phone  $specialization",Toast.LENGTH_LONG).show()
         val retofitApi = RetrofitApi.create()
         val email = RequestBody.create(MediaType.parse("text/plain"), email)
         val name = RequestBody.create(MediaType.parse("text/plain"), name)
-        val gender = RequestBody.create(MediaType.parse("text/plain"), gender)
-        val address = RequestBody.create(MediaType.parse("text/plain"), address)
-        val pin = RequestBody.create(MediaType.parse("text/plain"), pin)
+        val days = RequestBody.create(MediaType.parse("text/plain"), days)
+        val time = RequestBody.create(MediaType.parse("text/plain"), time)
+        val venue = RequestBody.create(MediaType.parse("text/plain"), venue)
 
         val password = RequestBody.create(MediaType.parse("text/plain"), password)
         val confirm_password = RequestBody.create(MediaType.parse("text/plain"), confirmPassword)
         val phone = RequestBody.create(MediaType.parse("text/plain"), phone)
-        val aadhar = RequestBody.create(MediaType.parse("text/plain"), aadharNum)
         val specialization = RequestBody.create(MediaType.parse("text/plain"), specialization)
 
 
 
 
-        val call = retofitApi.signupDoctor(email, password, name, phone, confirm_password, aadhar, gender, address, pin, specialization)
+        val call = retofitApi.signupDoctor(email, password, name, phone, confirm_password, days, venue, time, specialization)
         call.enqueue(object : Callback<SignupResponse> {
             override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
                 //To change body of created functions use File | Settings | File Templates.
@@ -285,27 +261,25 @@ class SignupFragment : Fragment(), AdapterView.OnItemSelectedListener {
         name: String,
         email: String,
         phone: String,
-        gender: String,
-        address: String,
-        pin: String,
+        venue: String,
+        time: String,
+        days: String,
         password: String,
-        confirmPassword: String,
-        aadharNum: String
+        confirmPassword: String
+
     ) {
-        Toast.makeText(context,"$name $email $password $gender $address $pin $confirmPassword $phone $aadharNum",Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"$name $email $password $days $time $venue $confirmPassword $phone ",Toast.LENGTH_LONG).show()
         val retofitApi = RetrofitApi.create()
         val email = RequestBody.create(MediaType.parse("text/plain"), email)
         val name = RequestBody.create(MediaType.parse("text/plain"), name)
         val password = RequestBody.create(MediaType.parse("text/plain"), password)
-        val gender = RequestBody.create(MediaType.parse("text/plain"), gender)
-        val address = RequestBody.create(MediaType.parse("text/plain"), address)
-        val pin = RequestBody.create(MediaType.parse("text/plain"), pin)
+        val days = RequestBody.create(MediaType.parse("text/plain"), days)
+        val time = RequestBody.create(MediaType.parse("text/plain"), time)
+        val venue = RequestBody.create(MediaType.parse("text/plain"), venue)
         val confirm_password = RequestBody.create(MediaType.parse("text/plain"), confirmPassword)
         val phone = RequestBody.create(MediaType.parse("text/plain"), phone)
-        val aadhar = RequestBody.create(MediaType.parse("text/plain"), aadharNum)
 
-
-        val call = retofitApi.signupPatient(email, password, name, phone, confirm_password, aadhar, gender, address, pin)
+        val call = retofitApi.signupPatient(email, password, name, phone, confirm_password, days, venue, time)
         call.enqueue(object : Callback<SignupResponse> {
             override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
                 //To change body of created functions use File | Settings | File Templates.

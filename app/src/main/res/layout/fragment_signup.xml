@@ -66,35 +66,6 @@
                 android:inputType="number" />
 
             <EditText
-                android:id="@+id/time_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="20dp"
-                android:hint="Time slot suitable for doctor"
-                android:drawablePadding="12dp"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/days_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="Days available"
-                android:inputType="number"
-                />
-            <EditText
-                android:id="@+id/venue_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Venue"
-                android:inputType="number"
-                android:layout_marginBottom="20dp"
-                android:visibility="visible"
-                />
-
-            <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -105,13 +76,35 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/confirmPassword"
+                android:id="@+id/time_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="20dp"
+                android:hint="Time slot suitable for doctor"
+                android:drawablePadding="12dp"
+                android:inputType="textPersonName"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/days_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="Confirm Password"
-                android:drawablePadding="12sp"
-                android:inputType="textPassword" />
+                android:hint="Days available"
+                android:inputType="number"
+                android:visibility="gone"
+                />
+            <EditText
+                android:id="@+id/venue_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Venue"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"

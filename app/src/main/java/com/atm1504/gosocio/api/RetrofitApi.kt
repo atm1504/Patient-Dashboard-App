@@ -9,7 +9,7 @@ import retrofit2.http.*
 interface RetrofitApi {
 
     @Multipart
-    @POST("/doctors/signup")
+    @POST("/doctors/signin")
     fun loginDoctor(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>
 
     @Multipart
@@ -28,8 +28,8 @@ interface RetrofitApi {
     fun signupDoctor(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
-        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("aadfhar") aadhar: RequestBody,
-        @Part("gender") gender: RequestBody, @Part("address") address: RequestBody, @Part("pin") pin: RequestBody, @Part("specialization") specialization:RequestBody
+        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("days") days: RequestBody,
+        @Part("time") time: RequestBody, @Part("venue") venue: RequestBody, @Part("specialization") specialization:RequestBody
     ): Call<SignupResponse>
 
     @Multipart
@@ -37,9 +37,8 @@ interface RetrofitApi {
     fun signupPatient(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
-        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("aadfhar") aadhar: RequestBody,
-        @Part("gender") gender: RequestBody, @Part("address") address: RequestBody, @Part("pin") pin: RequestBody
-    ): Call<SignupResponse>
+        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("days") days: RequestBody,
+        @Part("time") time: RequestBody, @Part("venue") venue: RequestBody  ): Call<SignupResponse>
 
     @Multipart
     @POST("reports.json")

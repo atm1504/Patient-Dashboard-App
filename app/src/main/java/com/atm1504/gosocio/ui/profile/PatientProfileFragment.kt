@@ -34,17 +34,9 @@ class PatientProfileFragment : Fragment() {
         setContents()
     }
     fun setContents(){
-
         val sharedPref: SharedPreferences = requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         show_name.text=sharedPref.getString("name","atm")
         show_email.text=sharedPref.getString("email","me@atm1504.in@gmail.com")
         show_phone.text=sharedPref.getString("phone","7234634237")
-        show_coins.text=sharedPref.getFloat("coins",0.0F).toString()
-        stick1.text=sharedPref.getInt("stick1",0).toString()
-        stick2.text=sharedPref.getInt("stick2",0).toString()
-        stick3.text=sharedPref.getInt("stick3",0).toString()
-        stick4.text=sharedPref.getInt("stick4",0).toString()
-        stick5.text=sharedPref.getInt("stick5",0).toString()
-
     }
 }

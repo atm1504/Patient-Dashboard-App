@@ -25,7 +25,7 @@ interface RetrofitApi {
     fun signupDoctor(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
-        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("days") days: RequestBody,
+        ) phone: RequestBody, @Part("days") days: RequestBody,
         @Part("time") time: RequestBody, @Part("venue") venue: RequestBody, @Part("specialization") specialization:RequestBody
     ): Call<SignupResponse>
 
@@ -34,7 +34,7 @@ interface RetrofitApi {
     fun signupPatient(
         @Part("email") email: RequestBody, @Part("password") password: RequestBody, @Part("name") name: RequestBody, @Part(
             "phone"
-        ) phone: RequestBody, @Part("confirm_password") confirm_password: RequestBody, @Part("days") days: RequestBody,
+        ) phone: RequestBody, @Part("days") days: RequestBody,
         @Part("time") time: RequestBody, @Part("venue") venue: RequestBody  ): Call<SignupResponse>
 
     @Multipart

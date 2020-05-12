@@ -16,6 +16,9 @@ interface RetrofitApi {
     @POST("/patients/{id}/record")
     fun uploadPrescriptionbyId(@Part("symptoms") symptoms: RequestBody, @Part("medicine") medicine: RequestBody, @Part("dose") dose: RequestBody, @Part("date") date: RequestBody, @Path("id") userId :String): Call<PrescriptionResponse>
 
+    @GET ("/patients/{id}/record")
+    fun getPrescList(@Path ("id") userId :String): Call<PrescriptionResponse>
+
     @Multipart
     @POST("/patients/signin")
     fun loginPatient(@Part("email") email: RequestBody, @Part("password") password: RequestBody): Call<LoginResponse>

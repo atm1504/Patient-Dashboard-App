@@ -63,6 +63,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:text="Availability :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -77,14 +78,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
 
             <TextView
                 android:id="@+id/days"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="Days:"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
                 android:textSize="24sp" />
 
             <TextView
@@ -92,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Monday - Friday"
+                android:background="#ffffff"
                 android:padding="8dp"
                 android:textSize="24sp" />
 
@@ -114,9 +120,13 @@
 
             <TextView
                 android:id="@+id/time"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:text="Time:"
                 android:textSize="24sp" />
 
@@ -124,6 +134,7 @@
                 android:id="@+id/show_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:hint="09:00 AM - 11:00 AM , 03:00 PM - 06:00 PM"
                 android:padding="8dp"
                 android:textSize="24sp" />
@@ -147,10 +158,14 @@
 
             <TextView
                 android:id="@+id/venue"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="Venue: "
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="24sp" />
 
             <TextView
@@ -158,6 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=" Amt Hospital , Room - RA112"
+                android:background="#ffffff"
                 android:padding="8dp"
                 android:textSize="24sp" />
 

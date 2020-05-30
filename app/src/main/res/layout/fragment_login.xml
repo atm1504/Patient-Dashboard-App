@@ -50,14 +50,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_min">
+            android:padding="4dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_input"
-                android:padding="@dimen/padding_min"
+                android:padding="4dp"
                 android:textSize="@dimen/text_size_mid" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
@@ -71,7 +71,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_min">
+            android:padding="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_password"

@@ -38,73 +38,166 @@
                     android:textSize="20sp" />
 
             </RadioGroup>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
 
-            <EditText
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:id="@+id/name"
+                android:textColorHint="@android:color/black"
+                android:padding="8dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint="Name"
+                android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="20dp"
+                >
 
-                android:drawablePadding="12sp"
-                android:hint="Name"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/email"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Email"
+                    android:ems="10"/>
 
-            <EditText
-                android:id="@+id/email"
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:drawablePadding="10dp"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
 
-            <EditText
-                android:id="@+id/phone"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/phone"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="phone"
+                    android:hint="Phone"
+                    android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="Phone"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="Password"
-
-                android:drawablePadding="12sp"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/time_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="20dp"
-                android:hint="Time slot suitable for doctor"
-                android:drawablePadding="12dp"
-                android:inputType="textPersonName"
-                android:visibility="gone"/>
-
-            <EditText
-                android:id="@+id/days_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="Days available"
-                android:inputType="number"
+                android:id="@+id/time_input"
                 android:visibility="gone"
-                />
-            <EditText
-                android:id="@+id/venue_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Venue"
-                android:inputType="number"
+
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/time_signup"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Time Slot"
+                    android:visibility="gone"
+                    android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:id="@+id/days_input"
                 android:visibility="gone"
-                />
+
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/days_signup"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:visibility="gone"
+                    android:hint="Days Available"
+                    android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:id="@+id/venue_input"
+                android:visibility="gone"
+
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/venue_signup"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Venue"
+                    android:visibility="gone"
+                    android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
+
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/password"
+                    android:textColorHint="@android:color/black"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Password"
+                    android:ems="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

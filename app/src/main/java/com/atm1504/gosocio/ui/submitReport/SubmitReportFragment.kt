@@ -124,7 +124,7 @@ class SubmitReportFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 progressDialog?.dismiss()
                 try {
                     roads = response.body()?.roads as List<String>
-                    loadSpinner()
+                    //loadSpinner()
                 }
                 catch (e :TypeCastException){
                     Log.d("KHANKI", "casting error")
@@ -135,17 +135,17 @@ class SubmitReportFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     // Load the spinner
-    fun loadSpinner() {
-        spinner = this.road_spinner
-        spinner?.setOnItemSelectedListener(this)
-
-        // Create an ArrayAdapter using a simple spinner layout and languages array
-        val aa = context?.let { ArrayAdapter(it, android.R.layout.simple_spinner_item, roads) }
-        // Set layout to use when the list of choices appear
-        aa?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        // Set Adapter to Spinner
-        spinner?.setAdapter(aa)
-    }
+//    fun loadSpinner() {
+//        spinner = this.road_spinner
+//        spinner?.setOnItemSelectedListener(this)
+//
+//        // Create an ArrayAdapter using a simple spinner layout and languages array
+//        val aa = context?.let { ArrayAdapter(it, android.R.layout.simple_spinner_item, roads) }
+//        // Set layout to use when the list of choices appear
+//        aa?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//        // Set Adapter to Spinner
+//        spinner?.setAdapter(aa)
+//    }
 
     override fun onItemSelected(arg0: AdapterView<*>, arg1: View, position: Int, id: Long) {
         road_selected = roads[position]
